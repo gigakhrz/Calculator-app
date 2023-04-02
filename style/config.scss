@@ -1,0 +1,44 @@
+
+$theme1:(
+    bodyColor: #3A4663,
+    switcherBackgroundColor: #242D44,
+    switcherButtonColor: #D03F2F,
+    textColor: white,
+    outputBackgroundColor: #181F33,
+    inputBackgroundColor:#242D44,
+    buttonColor: #EAE3DC,
+    delAndResetButtonColor: #647198,
+    equalButtonColor: #D03F2F,
+    buttonTextColor: #434A59,
+    delAndResetTextColor: white,
+    equalTextColor: white,
+    boxShadow:#B3A497,
+    boxshadowDelReset:#414E73,
+    equalBoxShadow:#93261A,
+    hoverButton:white,
+    hoverDelReset:#A2B2E1,
+    hoverEqual:#F96B5B,
+);
+
+$theme2:(
+
+);
+
+%flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+%flexRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flexSpaceBetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
