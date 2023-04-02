@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
-.theme1 header .theme-container, .theme1 {
+.theme2 header .theme-container, .theme2, .theme1 header .theme-container, .theme1 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.theme1 main button, .theme1 main, .theme1 header .range-container {
+.theme2 main button, .theme2 main, .theme2 header .range-container, .theme1 main button, .theme1 main, .theme1 header .range-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.theme1 header {
+.theme2 header, .theme1 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,6 +30,11 @@
   height: 88px;
   width: 327px;
   height: 42px;
+}
+@media screen and (min-width: 1024px) {
+  .theme1 header {
+    width: 540px;
+  }
 }
 .theme1 header h3 {
   font-size: 32px;
@@ -82,12 +87,25 @@
   justify-content: flex-end;
   align-items: center;
 }
+@media screen and (min-width: 1024px) {
+  .theme1 .result {
+    width: 540px;
+    height: 128px;
+  }
+}
 .theme1 .result h1 {
   font-size: 40px;
   line-height: 36.8px;
   letter-spacing: -0.67px;
   color: white;
   margin: 29px 24px 22px 0;
+}
+@media screen and (min-width: 1024px) {
+  .theme1 .result h1 {
+    font-size: 56px;
+    line-height: 51.5px;
+    letter-spacing: -1px;
+  }
 }
 .theme1 main {
   width: 327px;
@@ -96,6 +114,13 @@
   gap: 13px;
   border-radius: 10px;
   padding: 24px 0;
+}
+@media screen and (min-width: 1024px) {
+  .theme1 main {
+    width: 540px;
+    padding: 32px 0;
+    gap: 25px;
+  }
 }
 .theme1 main button {
   width: 60px;
@@ -111,6 +136,11 @@
   font-size: 32px;
   line-height: 29.5px;
   letter-spacing: -0.5px;
+}
+@media screen and (min-width: 1024px) {
+  .theme1 main button {
+    width: 101px;
+  }
 }
 .theme1 main button:hover {
   background-color: white;
@@ -131,6 +161,11 @@
   box-shadow: inset 0px -4px 0px #414E73;
   cursor: pointer;
 }
+@media screen and (min-width: 1024px) {
+  .theme1 main #reset {
+    width: 227px;
+  }
+}
 .theme1 main #reset:hover {
   background-color: #A2B2E1;
 }
@@ -142,4 +177,285 @@
 }
 .theme1 main #equal:hover {
   background-color: #F96B5B;
+}
+@media screen and (min-width: 1024px) {
+  .theme1 main #equal {
+    width: 227px;
+  }
+}
+
+.theme2 {
+  width: 100%;
+  min-height: 100vh;
+  gap: 28px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+.theme2 header {
+  height: 88px;
+  width: 327px;
+  height: 42px;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 header {
+    width: 540px;
+  }
+}
+.theme2 header h3 {
+  font-size: 32px;
+  line-height: 29.5px;
+  letter-spacing: -0.5px;
+}
+.theme2 header .theme-container {
+  align-items: flex-end;
+}
+.theme2 header .theme-container .theme-num {
+  font-size: 12px;
+  line-height: 11px;
+  letter-spacing: 9px;
+}
+.theme2 header .range-container {
+  gap: 26px;
+}
+.theme2 header .range-container .them {
+  font-size: 12px;
+  line-height: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.theme2 header .range-container input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 13px;
+  width: 71px;
+  height: 26px;
+}
+.theme2 header .range-container input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.theme2 .result {
+  width: 327px;
+  height: 88px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 .result {
+    width: 540px;
+    height: 128px;
+  }
+}
+.theme2 .result h1 {
+  font-size: 40px;
+  line-height: 36.8px;
+  letter-spacing: -0.67px;
+  margin: 29px 24px 22px 0;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 .result h1 {
+    font-size: 56px;
+    line-height: 51.5px;
+    letter-spacing: -1px;
+  }
+}
+.theme2 main {
+  width: 327px;
+  flex-wrap: wrap;
+  gap: 13px;
+  border-radius: 10px;
+  padding: 24px 0;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 main {
+    width: 540px;
+    padding: 32px 0;
+    gap: 25px;
+  }
+}
+.theme2 main button {
+  width: 60px;
+  height: 64px;
+  border-radius: 5px;
+  box-shadow: inset 0px -4px 0px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 29.5px;
+  letter-spacing: -0.5px;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 main button {
+    width: 101px;
+  }
+}
+.theme2 main #del {
+  box-shadow: inset 0px -4px 0px;
+  cursor: pointer;
+}
+.theme2 main #reset {
+  width: 133px;
+  box-shadow: inset 0px -4px 0px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 main #reset {
+    width: 227px;
+  }
+}
+.theme2 main #equal {
+  width: 133px;
+  box-shadow: inset 0px -4px 0px;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 main #equal {
+    width: 227px;
+  }
+}
+
+.theme2 {
+  width: 100%;
+  min-height: 100vh;
+  gap: 28px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+.theme2 header {
+  height: 88px;
+  width: 327px;
+  height: 42px;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 header {
+    width: 540px;
+  }
+}
+.theme2 header h3 {
+  font-size: 32px;
+  line-height: 29.5px;
+  letter-spacing: -0.5px;
+}
+.theme2 header .theme-container {
+  align-items: flex-end;
+}
+.theme2 header .theme-container .theme-num {
+  font-size: 12px;
+  line-height: 11px;
+  letter-spacing: 9px;
+}
+.theme2 header .range-container {
+  gap: 26px;
+}
+.theme2 header .range-container .them {
+  font-size: 12px;
+  line-height: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.theme2 header .range-container input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 13px;
+  width: 71px;
+  height: 26px;
+}
+.theme2 header .range-container input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.theme2 .result {
+  width: 327px;
+  height: 88px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 .result {
+    width: 540px;
+    height: 128px;
+  }
+}
+.theme2 .result h1 {
+  font-size: 40px;
+  line-height: 36.8px;
+  letter-spacing: -0.67px;
+  margin: 29px 24px 22px 0;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 .result h1 {
+    font-size: 56px;
+    line-height: 51.5px;
+    letter-spacing: -1px;
+  }
+}
+.theme2 main {
+  width: 327px;
+  flex-wrap: wrap;
+  gap: 13px;
+  border-radius: 10px;
+  padding: 24px 0;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 main {
+    width: 540px;
+    padding: 32px 0;
+    gap: 25px;
+  }
+}
+.theme2 main button {
+  width: 60px;
+  height: 64px;
+  border-radius: 5px;
+  box-shadow: inset 0px -4px 0px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 29.5px;
+  letter-spacing: -0.5px;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 main button {
+    width: 101px;
+  }
+}
+.theme2 main #del {
+  box-shadow: inset 0px -4px 0px;
+  cursor: pointer;
+}
+.theme2 main #reset {
+  width: 133px;
+  box-shadow: inset 0px -4px 0px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 main #reset {
+    width: 227px;
+  }
+}
+.theme2 main #equal {
+  width: 133px;
+  box-shadow: inset 0px -4px 0px;
+}
+@media screen and (min-width: 1024px) {
+  .theme2 main #equal {
+    width: 227px;
+  }
 }/*# sourceMappingURL=style.css.map */

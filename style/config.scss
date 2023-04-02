@@ -20,8 +20,48 @@ $theme1:(
     hoverEqual:#F96B5B,
 );
 
-$theme2:(
 
+$theme2:(
+    bodyColor: #E6E6E6,
+    switcherBackgroundColor: #D2CDCD,
+    switcherButtonColor: #C85402,
+    textColor: #36362C,
+    outputBackgroundColor: #EEEEEE,
+    inputBackgroundColor:#E5E4E1,
+    buttonColor: #E5E4E1,
+    delAndResetButtonColor: #378187,
+    equalButtonColor: #C85402,
+    buttonTextColor: #36362C,
+    delAndResetTextColor: white,
+    equalTextColor: white,
+    boxShadow:#A79E91,
+    boxshadowDelReset:#1B6066,
+    equalBoxShadow:873901,
+    hoverButton:white,
+    hoverDelReset:#62B5BC,
+    hoverEqual:#FF8A38,
+);
+
+
+$theme3:(
+    bodyColor: #17062A,
+    switcherBackgroundColor: #1E0936,
+    switcherButtonColor: #00DED0,
+    textColor: #FFE53D,
+    outputBackgroundColor: #1E0936,
+    inputBackgroundColor:#1E0936,
+    buttonColor: #331C4D,
+    delAndResetButtonColor: #56077C,
+    equalButtonColor: #00DED0,
+    buttonTextColor: #FFE53D,
+    delAndResetTextColor: white,
+    equalTextColor: #1A2327
+    boxShadow:#881C9E,
+    boxshadowDelReset:#BE15F4,
+    equalBoxShadow:#6CF9F1,
+    hoverButton:#6C34AC,
+    hoverDelReset:#8631AF,
+    hoverEqual:#93FFF8,
 );
 
 %flexCenter{
