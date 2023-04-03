@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
-.theme2 header .theme-container, .theme2, .theme1 header .theme-container, .theme1 {
+.theme3 header .theme-container, .theme3, .theme2 header .theme-container, .theme2, .theme1 header .theme-container, .theme1 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.theme2 main button, .theme2 main, .theme2 header .range-container, .theme1 main button, .theme1 main, .theme1 header .range-container {
+.theme3 main button, .theme3 main, .theme3 header .range-container, .theme2 main button, .theme2 main, .theme2 header .range-container, .theme1 main button, .theme1 main, .theme1 header .range-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.theme2 header, .theme1 header {
+.theme3 header, .theme2 header, .theme1 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -185,6 +185,7 @@
 }
 
 .theme2 {
+  background-color: #E6E6E6;
   width: 100%;
   min-height: 100vh;
   gap: 28px;
@@ -205,6 +206,7 @@
   font-size: 32px;
   line-height: 29.5px;
   letter-spacing: -0.5px;
+  color: #36362C;
 }
 .theme2 header .theme-container {
   align-items: flex-end;
@@ -222,6 +224,7 @@
   line-height: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  color: #36362C;
 }
 .theme2 header .range-container input {
   -webkit-appearance: none;
@@ -230,11 +233,13 @@
   border-radius: 13px;
   width: 71px;
   height: 26px;
+  background-color: #D2CDCD;
 }
 .theme2 header .range-container input::-webkit-slider-thumb {
   -webkit-appearance: none;
           appearance: none;
   border-radius: 50%;
+  background-color: #C85402;
   width: 15px;
   height: 15px;
   cursor: pointer;
@@ -242,6 +247,7 @@
 .theme2 .result {
   width: 327px;
   height: 88px;
+  background-color: #EEEEEE;
   border-radius: 10px;
   display: flex;
   justify-content: flex-end;
@@ -257,6 +263,7 @@
   font-size: 40px;
   line-height: 36.8px;
   letter-spacing: -0.67px;
+  color: #36362C;
   margin: 29px 24px 22px 0;
 }
 @media screen and (min-width: 1024px) {
@@ -268,6 +275,7 @@
 }
 .theme2 main {
   width: 327px;
+  background-color: #E5E4E1;
   flex-wrap: wrap;
   gap: 13px;
   border-radius: 10px;
@@ -284,11 +292,13 @@
   width: 60px;
   height: 64px;
   border-radius: 5px;
-  box-shadow: inset 0px -4px 0px;
+  box-shadow: inset 0px -4px 0px #A79E91;
+  background-color: #E5E4E1;
   font-family: "League Spartan", sans-serif;
   font-weight: 700;
   border: none;
   cursor: pointer;
+  color: #36362C;
   font-size: 32px;
   line-height: 29.5px;
   letter-spacing: -0.5px;
@@ -298,13 +308,23 @@
     width: 101px;
   }
 }
+.theme2 main button:hover {
+  background-color: white;
+}
 .theme2 main #del {
-  box-shadow: inset 0px -4px 0px;
+  background-color: #378187;
+  color: white;
+  box-shadow: inset 0px -4px 0px #1B6066;
   cursor: pointer;
+}
+.theme2 main #del:hover {
+  background-color: #62B5BC;
 }
 .theme2 main #reset {
   width: 133px;
-  box-shadow: inset 0px -4px 0px;
+  background-color: #378187;
+  color: white;
+  box-shadow: inset 0px -4px 0px #1B6066;
   cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
@@ -312,9 +332,17 @@
     width: 227px;
   }
 }
+.theme2 main #reset:hover {
+  background-color: #62B5BC;
+}
 .theme2 main #equal {
   width: 133px;
-  box-shadow: inset 0px -4px 0px;
+  background-color: #C85402;
+  color: white;
+  box-shadow: inset 0px -4px 0px #873901;
+}
+.theme2 main #equal:hover {
+  background-color: #FF8A38;
 }
 @media screen and (min-width: 1024px) {
   .theme2 main #equal {
@@ -322,140 +350,168 @@
   }
 }
 
-.theme2 {
+.theme3 {
+  background-color: #17062A;
   width: 100%;
   min-height: 100vh;
   gap: 28px;
   font-family: "League Spartan", sans-serif;
   font-weight: 700;
 }
-.theme2 header {
+.theme3 header {
   height: 88px;
   width: 327px;
   height: 42px;
 }
 @media screen and (min-width: 1024px) {
-  .theme2 header {
+  .theme3 header {
     width: 540px;
   }
 }
-.theme2 header h3 {
+.theme3 header h3 {
   font-size: 32px;
   line-height: 29.5px;
   letter-spacing: -0.5px;
+  color: #FFE53D;
 }
-.theme2 header .theme-container {
+.theme3 header .theme-container {
   align-items: flex-end;
 }
-.theme2 header .theme-container .theme-num {
+.theme3 header .theme-container .theme-num {
   font-size: 12px;
   line-height: 11px;
   letter-spacing: 9px;
 }
-.theme2 header .range-container {
+.theme3 header .range-container {
   gap: 26px;
 }
-.theme2 header .range-container .them {
+.theme3 header .range-container .them {
   font-size: 12px;
   line-height: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  color: #FFE53D;
 }
-.theme2 header .range-container input {
+.theme3 header .range-container input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   border-radius: 13px;
   width: 71px;
   height: 26px;
+  background-color: #1E0936;
 }
-.theme2 header .range-container input::-webkit-slider-thumb {
+.theme3 header .range-container input::-webkit-slider-thumb {
   -webkit-appearance: none;
           appearance: none;
   border-radius: 50%;
+  background-color: #00DED0;
   width: 15px;
   height: 15px;
   cursor: pointer;
 }
-.theme2 .result {
+.theme3 .result {
   width: 327px;
   height: 88px;
+  background-color: #1E0936;
   border-radius: 10px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 @media screen and (min-width: 1024px) {
-  .theme2 .result {
+  .theme3 .result {
     width: 540px;
     height: 128px;
   }
 }
-.theme2 .result h1 {
+.theme3 .result h1 {
   font-size: 40px;
   line-height: 36.8px;
   letter-spacing: -0.67px;
+  color: #FFE53D;
   margin: 29px 24px 22px 0;
 }
 @media screen and (min-width: 1024px) {
-  .theme2 .result h1 {
+  .theme3 .result h1 {
     font-size: 56px;
     line-height: 51.5px;
     letter-spacing: -1px;
   }
 }
-.theme2 main {
+.theme3 main {
   width: 327px;
+  background-color: #1E0936;
   flex-wrap: wrap;
   gap: 13px;
   border-radius: 10px;
   padding: 24px 0;
 }
 @media screen and (min-width: 1024px) {
-  .theme2 main {
+  .theme3 main {
     width: 540px;
     padding: 32px 0;
     gap: 25px;
   }
 }
-.theme2 main button {
+.theme3 main button {
   width: 60px;
   height: 64px;
   border-radius: 5px;
-  box-shadow: inset 0px -4px 0px;
+  box-shadow: inset 0px -4px 0px #881C9E;
+  background-color: #331C4D;
   font-family: "League Spartan", sans-serif;
   font-weight: 700;
   border: none;
   cursor: pointer;
+  color: #FFE53D;
   font-size: 32px;
   line-height: 29.5px;
   letter-spacing: -0.5px;
 }
 @media screen and (min-width: 1024px) {
-  .theme2 main button {
+  .theme3 main button {
     width: 101px;
   }
 }
-.theme2 main #del {
-  box-shadow: inset 0px -4px 0px;
+.theme3 main button:hover {
+  background-color: #6C34AC;
+}
+.theme3 main #del {
+  background-color: #56077C;
+  color: white;
+  box-shadow: inset 0px -4px 0px #BE15F4;
   cursor: pointer;
 }
-.theme2 main #reset {
+.theme3 main #del:hover {
+  background-color: #8631AF;
+}
+.theme3 main #reset {
   width: 133px;
-  box-shadow: inset 0px -4px 0px;
+  background-color: #56077C;
+  color: white;
+  box-shadow: inset 0px -4px 0px #BE15F4;
   cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
-  .theme2 main #reset {
+  .theme3 main #reset {
     width: 227px;
   }
 }
-.theme2 main #equal {
+.theme3 main #reset:hover {
+  background-color: #8631AF;
+}
+.theme3 main #equal {
   width: 133px;
-  box-shadow: inset 0px -4px 0px;
+  background-color: #00DED0;
+  color: #1A2327;
+  box-shadow: inset 0px -4px 0px #6CF9F1;
+}
+.theme3 main #equal:hover {
+  background-color: #93FFF8;
 }
 @media screen and (min-width: 1024px) {
-  .theme2 main #equal {
+  .theme3 main #equal {
     width: 227px;
   }
 }/*# sourceMappingURL=style.css.map */
