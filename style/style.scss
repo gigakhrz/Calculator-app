@@ -1,577 +1,557 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 
-@import './config.scss';
+@import "./config.scss";
 
-.theme1{
-    background-color: map-get($theme1,bodyColor);
-    width: 100%;
-    min-height: 100vh;
-    gap: 28px;
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 700;
+.theme1 {
+  background-color: map-get($theme1, bodyColor);
+  width: 100%;
+  min-height: 100vh;
+  gap: 28px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  padding: 50px 0;
 
-    @extend %flexCenter;
-    
-    header{
-        height: 88px;
-        @extend %flexSpaceBetween;
-        width: 327px;
-        height: 42px;
+  @extend %flexCenter;
 
-        @media screen and (min-width:1024px) {
-            width: 540px;
-        }
+  header {
+    height: 88px;
+    @extend %flexSpaceBetween;
+    width: 327px;
+    height: 42px;
 
-        h3{
-            font-size: 32px;
-            line-height: 29.5px;
-            letter-spacing: -0.5px;
-            color:  map-get($theme1,textColor)
-        }
-
-        .theme-container{
-            @extend %flexCenter;
-            align-items:flex-end;
-            
-           .theme-num{
-            font-size: 12px;
-            line-height: 11px;
-            letter-spacing: 9px;
-           }
-        }
-
-        .range-container{
-            @extend %flexRow;
-            gap: 26px;
-
-            .them{
-                font-size: 12px;
-                line-height: 11px;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                color: map-get($theme1,textColor)
-            }
-
-            input{
-                appearance: none;
-                border-radius: 13px;
-                width: 71px;
-                height: 26px;
-                background-color: map-get($theme1,switcherBackgroundColor );
-
-                &::-webkit-slider-thumb{
-                    appearance: none;
-                    border-radius: 50%;
-                    background-color: map-get($theme1,switcherButtonColor);
-                    width: 15px;
-                    height: 15px;
-                    cursor: pointer;
-                }
-            }
-
-        }
-
-
+    @media screen and (min-width: 1024px) {
+      width: 540px;
     }
 
-    .result{
-        width: 327px;
-        height: 88px;
-        background-color: map-get($theme1,outputBackgroundColor );
-        border-radius: 10px;
-        display: flex;
-        justify-content:flex-end;
-        align-items: center;
-
-        @media screen and (min-width:1024px) {
-            width: 540px;
-            height: 128px;
-        }
-
-        h1{
-            font-size: 40px;
-            line-height: 36.8px;
-            letter-spacing: -0.67px;
-            color: map-get($theme1,textColor);
-            margin: 29px 24px 22px 0;
-
-            @media screen and (min-width:1024px) {
-                font-size: 56px;
-                line-height: 51.5px;
-                letter-spacing: -1px;
-            }
-        }
+    h3 {
+      font-size: 32px;
+      line-height: 29.5px;
+      letter-spacing: -0.5px;
+      color: map-get($theme1, textColor);
     }
 
-    main{
-        @extend %flexRow;
-        width: 327px;
-        background-color: map-get($theme1,inputBackgroundColor);
-        flex-wrap: wrap;
-        gap: 13px;
-        border-radius: 10px;
-        padding: 24px 0;
+    .theme-container {
+      @extend %flexCenter;
+      align-items: flex-end;
 
-        @media screen and (min-width:1024px) {
-            width: 540px;
-            padding: 32px 0;
-            gap: 25px;
-        }
-
-        button{
-            @extend %flexRow;
-            width: 60px;
-            height: 64px;
-            border-radius: 5px;
-            box-shadow: inset 0px -4px 0px map-get($theme1 ,boxShadow);
-            background-color: map-get($theme1,buttonColor);
-            font-family: "League Spartan", sans-serif;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-
-            @media screen and (min-width:1024px) {
-                width: 101px;
-            }
-
-            color: map-get($theme1,buttonTextColor );
-            font-size: 32px;
-            line-height: 29.5px;
-            letter-spacing: -0.5px;
-
-            &:hover{
-                background-color: map-get($theme1, hoverButton );
-            }
-        }
-
-        #del{
-            background-color: map-get($theme1 , delAndResetButtonColor);
-            color: map-get($theme1 , delAndResetTextColor);
-            box-shadow: inset 0px -4px 0px map-get($theme1,boxshadowDelReset );
-            cursor: pointer;
-
-            &:hover{
-                background-color: map-get($theme1, hoverDelReset );
-            }
-        }
-
-        #reset{
-            width: 133px;
-            background-color: map-get($theme1 , delAndResetButtonColor);
-            color: map-get($theme1 , delAndResetTextColor);
-            box-shadow: inset 0px -4px 0px map-get($theme1,boxshadowDelReset );
-            cursor: pointer;
-
-            @media screen and (min-width:1024px) {
-                width: 227px;
-             }
- 
-
-            &:hover{
-                background-color: map-get($theme1, hoverDelReset );
-            }
-        }
-
-        #equal{
-            width: 133px;
-            background-color: map-get($theme1 ,equalButtonColor);
-            color: map-get($theme1 , equalTextColor);
-            box-shadow: inset 0px -4px 0px map-get($theme1,equalBoxShadow );
-
-            &:hover{
-                background-color: map-get($theme1, hoverEqual);
-            }
-
-            @media screen and (min-width:1024px) {
-                width: 227px;
-             }
- 
-        }
+      .theme-num {
+        font-size: 12px;
+        line-height: 11px;
+        letter-spacing: 9px;
+      }
     }
+
+    .range-container {
+      @extend %flexRow;
+      gap: 26px;
+
+      .them {
+        font-size: 12px;
+        line-height: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: map-get($theme1, textColor);
+      }
+
+      input {
+        appearance: none;
+        border-radius: 13px;
+        width: 71px;
+        height: 26px;
+        background-color: map-get($theme1, switcherBackgroundColor);
+
+        &::-webkit-slider-thumb {
+          appearance: none;
+          border-radius: 50%;
+          background-color: map-get($theme1, switcherButtonColor);
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .result {
+    width: 327px;
+    height: 88px;
+    background-color: map-get($theme1, outputBackgroundColor);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media screen and (min-width: 1024px) {
+      width: 540px;
+      height: 128px;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 36.8px;
+      letter-spacing: -0.67px;
+      color: map-get($theme1, textColor);
+      margin: 29px 24px 22px 0;
+
+      @media screen and (min-width: 1024px) {
+        font-size: 56px;
+        line-height: 51.5px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+
+  main {
+    @extend %flexRow;
+    width: 327px;
+    background-color: map-get($theme1, inputBackgroundColor);
+    flex-wrap: wrap;
+    gap: 13px;
+    border-radius: 10px;
+    padding: 24px 0;
+
+    @media screen and (min-width: 1024px) {
+      width: 540px;
+      padding: 32px 0;
+      gap: 25px;
+    }
+
+    button {
+      @extend %flexRow;
+      width: 60px;
+      height: 64px;
+      border-radius: 5px;
+      box-shadow: inset 0px -4px 0px map-get($theme1, boxShadow);
+      background-color: map-get($theme1, buttonColor);
+      font-family: "League Spartan", sans-serif;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+
+      @media screen and (min-width: 1024px) {
+        width: 101px;
+      }
+
+      color: map-get($theme1, buttonTextColor);
+      font-size: 32px;
+      line-height: 29.5px;
+      letter-spacing: -0.5px;
+
+      &:hover {
+        background-color: map-get($theme1, hoverButton);
+      }
+    }
+
+    #del {
+      background-color: map-get($theme1, delAndResetButtonColor);
+      color: map-get($theme1, delAndResetTextColor);
+      box-shadow: inset 0px -4px 0px map-get($theme1, boxshadowDelReset);
+      cursor: pointer;
+
+      &:hover {
+        background-color: map-get($theme1, hoverDelReset);
+      }
+    }
+
+    #reset {
+      width: 133px;
+      background-color: map-get($theme1, delAndResetButtonColor);
+      color: map-get($theme1, delAndResetTextColor);
+      box-shadow: inset 0px -4px 0px map-get($theme1, boxshadowDelReset);
+      cursor: pointer;
+
+      @media screen and (min-width: 1024px) {
+        width: 227px;
+      }
+
+      &:hover {
+        background-color: map-get($theme1, hoverDelReset);
+      }
+    }
+
+    #equal {
+      width: 133px;
+      background-color: map-get($theme1, equalButtonColor);
+      color: map-get($theme1, equalTextColor);
+      box-shadow: inset 0px -4px 0px map-get($theme1, equalBoxShadow);
+
+      &:hover {
+        background-color: map-get($theme1, hoverEqual);
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 227px;
+      }
+    }
+  }
 }
 
 //--------2-----------
 
-.theme2{
-    background-color: map-get($theme2,bodyColor);
-    width: 100%;
-    min-height: 100vh;
-    gap: 28px;
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 700;
+.theme2 {
+  background-color: map-get($theme2, bodyColor);
+  width: 100%;
+  min-height: 100vh;
+  gap: 28px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
 
-    @extend %flexCenter;
-    
-    header{
-        height: 88px;
-        @extend %flexSpaceBetween;
-        width: 327px;
-        height: 42px;
+  @extend %flexCenter;
 
-        @media screen and (min-width:1024px) {
-            width: 540px;
-        }
+  header {
+    height: 88px;
+    @extend %flexSpaceBetween;
+    width: 327px;
+    height: 42px;
 
-        h3{
-            font-size: 32px;
-            line-height: 29.5px;
-            letter-spacing: -0.5px;
-            color:  map-get($theme2,textColor)
-        }
-
-        .theme-container{
-            @extend %flexCenter;
-            align-items:flex-end;
-            
-           .theme-num{
-            font-size: 12px;
-            line-height: 11px;
-            letter-spacing: 9px;
-           }
-        }
-
-        .range-container{
-            @extend %flexRow;
-            gap: 26px;
-
-            .them{
-                font-size: 12px;
-                line-height: 11px;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                color: map-get($theme2,textColor)
-            }
-
-            input{
-                appearance: none;
-                border-radius: 13px;
-                width: 71px;
-                height: 26px;
-                background-color: map-get($theme2,switcherBackgroundColor );
-
-                &::-webkit-slider-thumb{
-                    appearance: none;
-                    border-radius: 50%;
-                    background-color: map-get($theme2,switcherButtonColor);
-                    width: 15px;
-                    height: 15px;
-                    cursor: pointer;
-                }
-            }
-
-        }
-
-
+    @media screen and (min-width: 1024px) {
+      width: 540px;
     }
 
-    .result{
-        width: 327px;
-        height: 88px;
-        background-color: map-get($theme2,outputBackgroundColor );
-        border-radius: 10px;
-        display: flex;
-        justify-content:flex-end;
-        align-items: center;
-
-        @media screen and (min-width:1024px) {
-            width: 540px;
-            height: 128px;
-        }
-
-        h1{
-            font-size: 40px;
-            line-height: 36.8px;
-            letter-spacing: -0.67px;
-            color: map-get($theme2,textColor);
-            margin: 29px 24px 22px 0;
-
-            @media screen and (min-width:1024px) {
-                font-size: 56px;
-                line-height: 51.5px;
-                letter-spacing: -1px;
-            }
-        }
+    h3 {
+      font-size: 32px;
+      line-height: 29.5px;
+      letter-spacing: -0.5px;
+      color: map-get($theme2, textColor);
     }
 
-    main{
-        @extend %flexRow;
-        width: 327px;
-        background-color: map-get($theme2,inputBackgroundColor);
-        flex-wrap: wrap;
-        gap: 13px;
-        border-radius: 10px;
-        padding: 24px 0;
+    .theme-container {
+      @extend %flexCenter;
+      align-items: flex-end;
 
-        @media screen and (min-width:1024px) {
-            width: 540px;
-            padding: 32px 0;
-            gap: 25px;
-        }
-
-        button{
-            @extend %flexRow;
-            width: 60px;
-            height: 64px;
-            border-radius: 5px;
-            box-shadow: inset 0px -4px 0px map-get($theme2 ,boxShadow);
-            background-color: map-get($theme2,buttonColor);
-            font-family: "League Spartan", sans-serif;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-
-            @media screen and (min-width:1024px) {
-                width: 101px;
-            }
-
-            color: map-get($theme2,buttonTextColor );
-            font-size: 32px;
-            line-height: 29.5px;
-            letter-spacing: -0.5px;
-
-            &:hover{
-                background-color: map-get($theme2, hoverButton );
-            }
-        }
-
-        #del{
-            background-color: map-get($theme2 , delAndResetButtonColor);
-            color: map-get($theme2 , delAndResetTextColor);
-            box-shadow: inset 0px -4px 0px map-get($theme2,boxshadowDelReset );
-            cursor: pointer;
-
-            &:hover{
-                background-color: map-get($theme2, hoverDelReset );
-            }
-        }
-
-        #reset{
-            width: 133px;
-            background-color: map-get($theme2 , delAndResetButtonColor);
-            color: map-get($theme2 , delAndResetTextColor);
-            box-shadow: inset 0px -4px 0px map-get($theme2,boxshadowDelReset );
-            cursor: pointer;
-
-            @media screen and (min-width:1024px) {
-                width: 227px;
-             }
- 
-
-            &:hover{
-                background-color: map-get($theme2, hoverDelReset );
-            }
-        }
-
-        #equal{
-            width: 133px;
-            background-color: map-get($theme2,equalButtonColor);
-            color: map-get($theme2 , equalTextColor);
-            box-shadow: inset 0px -4px 0px map-get($theme2,equalBoxShadow );
-
-            &:hover{
-                background-color: map-get($theme2, hoverEqual);
-            }
-
-            @media screen and (min-width:1024px) {
-                width: 227px;
-             }
- 
-        }
+      .theme-num {
+        font-size: 12px;
+        line-height: 11px;
+        letter-spacing: 9px;
+      }
     }
+
+    .range-container {
+      @extend %flexRow;
+      gap: 26px;
+
+      .them {
+        font-size: 12px;
+        line-height: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: map-get($theme2, textColor);
+      }
+
+      input {
+        appearance: none;
+        border-radius: 13px;
+        width: 71px;
+        height: 26px;
+        background-color: map-get($theme2, switcherBackgroundColor);
+
+        &::-webkit-slider-thumb {
+          appearance: none;
+          border-radius: 50%;
+          background-color: map-get($theme2, switcherButtonColor);
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .result {
+    width: 327px;
+    height: 88px;
+    background-color: map-get($theme2, outputBackgroundColor);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media screen and (min-width: 1024px) {
+      width: 540px;
+      height: 128px;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 36.8px;
+      letter-spacing: -0.67px;
+      color: map-get($theme2, textColor);
+      margin: 29px 24px 22px 0;
+
+      @media screen and (min-width: 1024px) {
+        font-size: 56px;
+        line-height: 51.5px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+
+  main {
+    @extend %flexRow;
+    width: 327px;
+    background-color: map-get($theme2, inputBackgroundColor);
+    flex-wrap: wrap;
+    gap: 13px;
+    border-radius: 10px;
+    padding: 24px 0;
+
+    @media screen and (min-width: 1024px) {
+      width: 540px;
+      padding: 32px 0;
+      gap: 25px;
+    }
+
+    button {
+      @extend %flexRow;
+      width: 60px;
+      height: 64px;
+      border-radius: 5px;
+      box-shadow: inset 0px -4px 0px map-get($theme2, boxShadow);
+      background-color: map-get($theme2, buttonColor);
+      font-family: "League Spartan", sans-serif;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+
+      @media screen and (min-width: 1024px) {
+        width: 101px;
+      }
+
+      color: map-get($theme2, buttonTextColor);
+      font-size: 32px;
+      line-height: 29.5px;
+      letter-spacing: -0.5px;
+
+      &:hover {
+        background-color: map-get($theme2, hoverButton);
+      }
+    }
+
+    #del {
+      background-color: map-get($theme2, delAndResetButtonColor);
+      color: map-get($theme2, delAndResetTextColor);
+      box-shadow: inset 0px -4px 0px map-get($theme2, boxshadowDelReset);
+      cursor: pointer;
+
+      &:hover {
+        background-color: map-get($theme2, hoverDelReset);
+      }
+    }
+
+    #reset {
+      width: 133px;
+      background-color: map-get($theme2, delAndResetButtonColor);
+      color: map-get($theme2, delAndResetTextColor);
+      box-shadow: inset 0px -4px 0px map-get($theme2, boxshadowDelReset);
+      cursor: pointer;
+
+      @media screen and (min-width: 1024px) {
+        width: 227px;
+      }
+
+      &:hover {
+        background-color: map-get($theme2, hoverDelReset);
+      }
+    }
+
+    #equal {
+      width: 133px;
+      background-color: map-get($theme2, equalButtonColor);
+      color: map-get($theme2, equalTextColor);
+      box-shadow: inset 0px -4px 0px map-get($theme2, equalBoxShadow);
+
+      &:hover {
+        background-color: map-get($theme2, hoverEqual);
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 227px;
+      }
+    }
+  }
 }
 
 // --------3---------
 
-.theme3{
-    background-color: map-get($theme3,bodyColor);
-    width: 100%;
-    min-height: 100vh;
-    gap: 28px;
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 700;
+.theme3 {
+  background-color: map-get($theme3, bodyColor);
+  width: 100%;
+  min-height: 100vh;
+  gap: 28px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
 
-    @extend %flexCenter;
-    
-    header{
-        height: 88px;
-        @extend %flexSpaceBetween;
-        width: 327px;
-        height: 42px;
+  @extend %flexCenter;
 
-        @media screen and (min-width:1024px) {
-            width: 540px;
-        }
+  header {
+    height: 88px;
+    @extend %flexSpaceBetween;
+    width: 327px;
+    height: 42px;
 
-        h3{
-            font-size: 32px;
-            line-height: 29.5px;
-            letter-spacing: -0.5px;
-            color:  map-get($theme3,textColor)
-        }
-
-        .theme-container{
-            @extend %flexCenter;
-            align-items:flex-end;
-            
-           .theme-num{
-            font-size: 12px;
-            line-height: 11px;
-            letter-spacing: 9px;
-           }
-        }
-
-        .range-container{
-            @extend %flexRow;
-            gap: 26px;
-
-            .them{
-                font-size: 12px;
-                line-height: 11px;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                color: map-get($theme3,textColor)
-            }
-
-            input{
-                appearance: none;
-                border-radius: 13px;
-                width: 71px;
-                height: 26px;
-                background-color: map-get($theme3,switcherBackgroundColor );
-
-                &::-webkit-slider-thumb{
-                    appearance: none;
-                    border-radius: 50%;
-                    background-color: map-get($theme3,switcherButtonColor);
-                    width: 15px;
-                    height: 15px;
-                    cursor: pointer;
-                }
-            }
-
-        }
-
-
+    @media screen and (min-width: 1024px) {
+      width: 540px;
     }
 
-    .result{
-        width: 327px;
-        height: 88px;
-        background-color: map-get($theme3,outputBackgroundColor );
-        border-radius: 10px;
-        display: flex;
-        justify-content:flex-end;
-        align-items: center;
-
-        @media screen and (min-width:1024px) {
-            width: 540px;
-            height: 128px;
-        }
-
-        h1{
-            font-size: 40px;
-            line-height: 36.8px;
-            letter-spacing: -0.67px;
-            color: map-get($theme3,textColor);
-            margin: 29px 24px 22px 0;
-
-            @media screen and (min-width:1024px) {
-                font-size: 56px;
-                line-height: 51.5px;
-                letter-spacing: -1px;
-            }
-        }
+    h3 {
+      font-size: 32px;
+      line-height: 29.5px;
+      letter-spacing: -0.5px;
+      color: map-get($theme3, textColor);
     }
 
-    main{
-        @extend %flexRow;
-        width: 327px;
-        background-color: map-get($theme3,inputBackgroundColor);
-        flex-wrap: wrap;
-        gap: 13px;
-        border-radius: 10px;
-        padding: 24px 0;
+    .theme-container {
+      @extend %flexCenter;
+      align-items: flex-end;
 
-        @media screen and (min-width:1024px) {
-            width: 540px;
-            padding: 32px 0;
-            gap: 25px;
-        }
-
-        button{
-            @extend %flexRow;
-            width: 60px;
-            height: 64px;
-            border-radius: 5px;
-            box-shadow: inset 0px -4px 0px map-get($theme3,boxShadow);
-            background-color: map-get($theme3,buttonColor);
-            font-family: "League Spartan", sans-serif;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-
-            @media screen and (min-width:1024px) {
-                width: 101px;
-            }
-
-            color: map-get($theme3,buttonTextColor );
-            font-size: 32px;
-            line-height: 29.5px;
-            letter-spacing: -0.5px;
-
-            &:hover{
-                background-color: map-get($theme3, hoverButton );
-            }
-        }
-
-        #del{
-            background-color: map-get($theme3, delAndResetButtonColor);
-            color: map-get($theme3, delAndResetTextColor);
-            box-shadow: inset 0px -4px 0px map-get($theme3,boxshadowDelReset );
-            cursor: pointer;
-
-            &:hover{
-                background-color: map-get($theme3, hoverDelReset );
-            }
-        }
-
-        #reset{
-            width: 133px;
-            background-color: map-get($theme3, delAndResetButtonColor);
-            color: map-get($theme3 , delAndResetTextColor);
-            box-shadow: inset 0px -4px 0px map-get($theme3,boxshadowDelReset );
-            cursor: pointer;
-
-            @media screen and (min-width:1024px) {
-                width: 227px;
-             }
- 
-
-            &:hover{
-                background-color: map-get($theme3, hoverDelReset );
-            }
-        }
-
-        #equal{
-            width: 133px;
-            background-color: map-get($theme3 ,equalButtonColor);
-            color: map-get($theme3, equalTextColor);
-            box-shadow: inset 0px -4px 0px map-get($theme3,equalBoxShadow );
-
-            &:hover{
-                background-color: map-get($theme3, hoverEqual);
-            }
-
-            @media screen and (min-width:1024px) {
-                width: 227px;
-             }
- 
-        }
+      .theme-num {
+        font-size: 12px;
+        line-height: 11px;
+        letter-spacing: 9px;
+      }
     }
+
+    .range-container {
+      @extend %flexRow;
+      gap: 26px;
+
+      .them {
+        font-size: 12px;
+        line-height: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: map-get($theme3, textColor);
+      }
+
+      input {
+        appearance: none;
+        border-radius: 13px;
+        width: 71px;
+        height: 26px;
+        background-color: map-get($theme3, switcherBackgroundColor);
+
+        &::-webkit-slider-thumb {
+          appearance: none;
+          border-radius: 50%;
+          background-color: map-get($theme3, switcherButtonColor);
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .result {
+    width: 327px;
+    height: 88px;
+    background-color: map-get($theme3, outputBackgroundColor);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media screen and (min-width: 1024px) {
+      width: 540px;
+      height: 128px;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 36.8px;
+      letter-spacing: -0.67px;
+      color: map-get($theme3, textColor);
+      margin: 29px 24px 22px 0;
+
+      @media screen and (min-width: 1024px) {
+        font-size: 56px;
+        line-height: 51.5px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+
+  main {
+    @extend %flexRow;
+    width: 327px;
+    background-color: map-get($theme3, inputBackgroundColor);
+    flex-wrap: wrap;
+    gap: 13px;
+    border-radius: 10px;
+    padding: 24px 0;
+
+    @media screen and (min-width: 1024px) {
+      width: 540px;
+      padding: 32px 0;
+      gap: 25px;
+    }
+
+    button {
+      @extend %flexRow;
+      width: 60px;
+      height: 64px;
+      border-radius: 5px;
+      box-shadow: inset 0px -4px 0px map-get($theme3, boxShadow);
+      background-color: map-get($theme3, buttonColor);
+      font-family: "League Spartan", sans-serif;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+
+      @media screen and (min-width: 1024px) {
+        width: 101px;
+      }
+
+      color: map-get($theme3, buttonTextColor);
+      font-size: 32px;
+      line-height: 29.5px;
+      letter-spacing: -0.5px;
+
+      &:hover {
+        background-color: map-get($theme3, hoverButton);
+      }
+    }
+
+    #del {
+      background-color: map-get($theme3, delAndResetButtonColor);
+      color: map-get($theme3, delAndResetTextColor);
+      box-shadow: inset 0px -4px 0px map-get($theme3, boxshadowDelReset);
+      cursor: pointer;
+
+      &:hover {
+        background-color: map-get($theme3, hoverDelReset);
+      }
+    }
+
+    #reset {
+      width: 133px;
+      background-color: map-get($theme3, delAndResetButtonColor);
+      color: map-get($theme3, delAndResetTextColor);
+      box-shadow: inset 0px -4px 0px map-get($theme3, boxshadowDelReset);
+      cursor: pointer;
+
+      @media screen and (min-width: 1024px) {
+        width: 227px;
+      }
+
+      &:hover {
+        background-color: map-get($theme3, hoverDelReset);
+      }
+    }
+
+    #equal {
+      width: 133px;
+      background-color: map-get($theme3, equalButtonColor);
+      color: map-get($theme3, equalTextColor);
+      box-shadow: inset 0px -4px 0px map-get($theme3, equalBoxShadow);
+
+      &:hover {
+        background-color: map-get($theme3, hoverEqual);
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 227px;
+      }
+    }
+  }
 }
-
-
-
-
-
-
